@@ -11,12 +11,17 @@ const taskRoutes: Routes = [
     {
         path: 'tarefa/save',
         component: TaskDetailComponent
+    },
+    {
+        path: 'tarefa/save/:id',
+        component: TaskDetailComponent
     }
 ];
 
 @NgModule({
     imports:[
         RouterModule.forChild(taskRoutes)
-    ]
+    ],
+    exports:[RouterModule]
 })
 export class TaskRoutingModule {}

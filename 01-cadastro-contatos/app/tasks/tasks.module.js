@@ -11,13 +11,16 @@ const common_1 = require("@angular/common");
 const task_detail_component_1 = require("./task-detail.component");
 const tasks_lista_component_1 = require("./tasks-lista.component");
 const task_routing_module_1 = require("./task-routing.module");
+const task_service_1 = require("./task.service");
+const forms_1 = require("@angular/forms");
 let TaskModule = class TaskModule {
 };
 TaskModule = __decorate([
     core_1.NgModule({
         imports: [
             common_1.CommonModule,
-            task_routing_module_1.TaskRoutingModule
+            task_routing_module_1.TaskRoutingModule,
+            forms_1.FormsModule
         ],
         declarations: [
             task_detail_component_1.TaskDetailComponent,
@@ -25,6 +28,9 @@ TaskModule = __decorate([
         ],
         exports: [
             tasks_lista_component_1.TaskListaComponent
+        ],
+        providers: [
+            task_service_1.TaskService
         ]
     })
 ], TaskModule);

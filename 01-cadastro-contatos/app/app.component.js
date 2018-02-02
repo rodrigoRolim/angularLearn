@@ -11,10 +11,12 @@ let AppComponent = class AppComponent {
 };
 AppComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'my-app',
-        template: `
-        <router-outlet></router-outlet>
-    `
+        templateUrl: 'app.component.html',
+        styleUrls: [
+            'app.component.css'
+        ]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

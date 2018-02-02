@@ -18,6 +18,10 @@ const taskRoutes = [
     {
         path: 'tarefa/save',
         component: task_detail_component_1.TaskDetailComponent
+    },
+    {
+        path: 'tarefa/save/:id',
+        component: task_detail_component_1.TaskDetailComponent
     }
 ];
 let TaskRoutingModule = class TaskRoutingModule {
@@ -26,7 +30,8 @@ TaskRoutingModule = __decorate([
     core_1.NgModule({
         imports: [
             router_1.RouterModule.forChild(taskRoutes)
-        ]
+        ],
+        exports: [router_1.RouterModule]
     })
 ], TaskRoutingModule);
 exports.TaskRoutingModule = TaskRoutingModule;

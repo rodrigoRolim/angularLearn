@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Task {
-    constructor(tarefa, descricao, data) {
+    constructor(id, tarefa, descricao, data) {
+        this.id = id;
         this.tarefa = tarefa;
         this.descricao = descricao;
         this.data = data;
