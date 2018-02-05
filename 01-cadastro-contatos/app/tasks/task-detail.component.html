@@ -21,14 +21,14 @@
         </div>
         <div [ngClass]=" getFormGroupClass(data.valid, data.pristine)">
             <label for="tarefa">Data</label>
-            <input type="date" [ngClass]=" getFormControlClass(data.valid, data.pristine)" name="data"
+            <input type="text" [ngClass]=" getFormControlClass(data.valid, data.pristine)" name="data"
             [(ngModel)]="task.data"
             #data="ngModel"
             required>
             <div class="form-control-feedback" [hidden]="data.valid || data.pristine">Este campo é obrigatório</div>
         </div>
         <button type="submit" class="btn btn-success" [disabled]="!tarefaForm.form.valid">Salvar</button>
-        <a class="btn btn-secondary" routerLink="/">voltar</a>
+        <a class="btn btn-secondary" (click)="goBack()">voltar</a>
     </form>
  
 </div>

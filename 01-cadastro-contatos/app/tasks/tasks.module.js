@@ -13,6 +13,7 @@ const tasks_lista_component_1 = require("./tasks-lista.component");
 const task_routing_module_1 = require("./task-routing.module");
 const task_service_1 = require("./task.service");
 const forms_1 = require("@angular/forms");
+const task_busca_component_1 = require("./task-busca.component");
 let TaskModule = class TaskModule {
 };
 TaskModule = __decorate([
@@ -24,10 +25,12 @@ TaskModule = __decorate([
         ],
         declarations: [
             task_detail_component_1.TaskDetailComponent,
-            tasks_lista_component_1.TaskListaComponent
+            tasks_lista_component_1.TaskListaComponent,
+            task_busca_component_1.TaskBuscaComponent
         ],
         exports: [
-            tasks_lista_component_1.TaskListaComponent
+            tasks_lista_component_1.TaskListaComponent,
+            task_busca_component_1.TaskBuscaComponent
         ],
         providers: [
             task_service_1.TaskService

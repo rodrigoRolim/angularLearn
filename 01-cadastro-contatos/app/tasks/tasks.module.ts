@@ -5,7 +5,7 @@ import { TaskListaComponent } from './tasks-lista.component';
 import { TaskRoutingModule } from './task-routing.module';
 import { TaskService } from './task.service';
 import { FormsModule } from '@angular/forms';
-
+import { TaskBuscaComponent } from './task-busca.component';
 @NgModule({
     imports:[
         CommonModule,
@@ -14,10 +14,12 @@ import { FormsModule } from '@angular/forms';
     ],
     declarations: [
         TaskDetailComponent,
-        TaskListaComponent
+        TaskListaComponent,
+        TaskBuscaComponent
     ],
     exports:[
-        TaskListaComponent
+        TaskListaComponent,
+        TaskBuscaComponent
     ],
     providers:[
         TaskService

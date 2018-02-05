@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
         'app.component.css'
     ]
 })
-export class AppComponent {}
+export class AppComponent {
+    
+    log(param: string): void {
+        console.log(param);
+    }
+}

@@ -6,11 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require("./util/rxjs-extensions");
 const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
 const app_component_1 = require("./app.component");
 const app_routing_module_1 = require("./app-routing.module");
 const tasks_module_1 = require("./tasks/tasks.module");
+const http_1 = require("@angular/http");
+const in_memory_data_service_1 = require("./in-memory-data.service");
+const angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
+const dialog_service_1 = require("./dialog.service");
+const forms_1 = require("@angular/forms");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -18,7 +24,13 @@ AppModule = __decorate([
         imports: [
             app_routing_module_1.AppRoutingModule,
             platform_browser_1.BrowserModule,
-            tasks_module_1.TaskModule
+            forms_1.FormsModule,
+            tasks_module_1.TaskModule,
+            http_1.HttpModule,
+            angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService)
+        ],
+        providers: [
+            dialog_service_1.DialogService
         ],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]

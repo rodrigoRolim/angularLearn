@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~5.2.3",
     "@angular/platform-browser-dynamic": "~5.2.3",
     "@angular/router": "~5.2.3",
-    "angular-in-memory-web-api": "~0.5.3",
+    "angular-in-memory-web-api": "~0.1.13",
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.5.3",
     "rxjs": "5.5.6",

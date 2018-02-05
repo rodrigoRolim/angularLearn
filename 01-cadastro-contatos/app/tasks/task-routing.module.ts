@@ -21,6 +21,7 @@ const taskRoutes: Routes = [
 @NgModule({
     imports:[
         RouterModule.forChild(taskRoutes)
+        
     ],
     exports:[RouterModule]
 })

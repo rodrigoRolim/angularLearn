@@ -36,13 +36,19 @@ let TaskDetailComponent = class TaskDetailComponent {
         });
     }
     onSubmit() {
+        let promise;
         console.log('novo:', this.isNew);
         if (this.isNew) {
-            console.log("cadastrar tarefa");
+            //console.log("cadastrar tarefa");
+            promise = this.taskService.create(this.task);
         }
         else {
-            console.log("alterar tarefa");
+            promise = this.taskService.update(this.task);
         }
+        promise.then(task => this.goBack());
+    }
+    goBack() {
+        this.location.back();
     }
     getFormGroupClass(isValid, isPristine) {
         return {
